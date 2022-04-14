@@ -1,0 +1,87 @@
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#win {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#toolbar {
+    height: 25px;
+    width: 100px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-color: #F0F0F0;
+    border-radius: 5px;
+    display: none;
+}
+
+/*缩放*/
+#toolbar2 {
+    width: 152px;
+    height: 150px;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: rgba(240, 240, 240, 0.7);
+    display: none;
+    border: 1px solid lightgoldenrodyellow;
+}
+
+#color {
+    font-family: sans-serif;
+    height: 50px;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+#size {
+    font-family: sans-serif;
+    position: absolute;
+    display: none;
+    font-weight: bolder;
+    font-size: 16px;
+    background-color: rgba(240, 240, 240, 0.7);
+    color: rgb(43, 43, 43);
+    padding: 3px;
+}
+
+.fa-thumbtack {
+    color: lightskyblue;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.fa-times {
+    color: lightcoral;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.fa-check {
+    color: lightgreen;
+    cursor: pointer;
+}
+

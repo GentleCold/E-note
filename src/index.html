@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>E-note</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+</head>
+<body>
+    <div id="filter">
+        <div id="editor" contenteditable="true" spellcheck="false"></div>
+        <label for="search"></label>
+        <div id="toolbar"><input id="search" spellcheck="false"><div id="calculate"><span id="calText">0/0</span></div><div id="buttonbar"><i class="fas fa-angle-up button"></i><i class="fas fa-angle-down button"></i><i class="fas fa-times button"></i></div></div>
+    </div>
+    <div id="init">
+        <a href="javascript:void(0);" onclick='window.electronAPI.new();'> <i class="fas fa-file"></i> Create a New File</a>
+        <br>
+        <a href="javascript:void(0);" onclick='window.electronAPI.open();'> <i class="fas fa-folder-open"></i> Open a File</a>
+        <br>
+        <a href="javascript:void(0);" onclick='window.electronAPI.mode();'> <i class="fas fa-book-open"></i> Note Mode</a>
+        <br>
+        <a href="javascript:void(0);" onclick='window.electronAPI.change();'> <i class="fas fa-image"></i> Change Background</a>
+    </div>
+</body>
+<script src="render/index.js"></script>
+</html>

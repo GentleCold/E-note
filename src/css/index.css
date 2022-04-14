@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: monospace;
+    background-image: url("../../../../background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#filter {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(79, 88, 107, 0.85);
+    /*important!!!*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+}
+
+#editor {
+    font-family: monospace;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+    resize: none;
+    outline: none;
+    display: none;
+    background-color: transparent;
+    color: rgb(221, 226, 241);
+    cursor: text;
+    caret-color: white;
+}
+
+#toolbar {
+    width: 242px;
+    height: 45px;
+    border-radius: 10px;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    background-color: rgba(35, 35, 35, 0.5);
+    overflow: hidden;
+    flex-wrap: nowrap;
+    align-items: center;
+    display: none;
+}
+
+#buttonbar {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 14px;
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.button {
+    margin-right: 15px;
+    color: rgb(221, 226, 241);
+    cursor: pointer;
+}
+
+#calculate {
+    height: 100%;
+    font-size: 18px;
+    color: rgb(221, 226, 241);
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    right: 97px;
+    /*line-height: 100%;*/
+    /*text-align: center;*/
+}
+
+#calText {
+    padding-right: 5px;
+    font-size: 12px;
+    font-family: sans-serif;
+    -webkit-user-select: none;
+}
+
+#search {
+    height: 100%;
+    font-size: 16px;
+    color: rgb(221, 226, 241);
+    border-radius: 10px;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    border: none;
+    padding: 5px;
+    position: absolute;
+    left: 10px;
+    line-height: 100%;
+    font-family: inherit;
+}
+
+img {
+    width: 240px;
+    height: 135px;
+    margin: 0 5px 5px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px rgba(79, 88, 107, 0.8);
+    background-color: rgba(35, 35, 35, 0.5);
+    object-fit: contain;
+    cursor: zoom-in;
+}
+
+#init {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 56px;
+    font-style: oblique;
+    color: rgb(221, 226, 241, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 2px 2px black, -2px -2px black, 2px -2px black, -2px 2px black;
+    background-color: rgba(79, 88, 107, 0.7);
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+.strong {
+    background-color: goldenrod;
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    background-color: rgba(135, 206, 235, 0.7);
+    background-image: -webkit-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%,
+        transparent
+    );
+    cursor: pointer;
+}
+::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: rgba(237, 237, 237, 0.7);
+    cursor: pointer;
+}
